@@ -28,6 +28,7 @@ public class LanCenter implements Serializable {
 	@Column(name="adress",nullable=false,length=60)
 	private String adress;
 	
-	@Column(name="disctrit",nullable=false,length=60)
-	private String disctrict;
+	@Column(name="district",nullable=false,length=60)
+	private String district;
+	
 }
