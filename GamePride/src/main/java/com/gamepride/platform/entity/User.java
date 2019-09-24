@@ -25,6 +25,24 @@ public class User implements Serializable {
 	@Column(name="password",nullable=false)
 	private char password;
 	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public char getEmail() {
+		return email;
+	}
+	public void setEmail(char email) {
+		this.email = email;
+	}
+	public char getPassword() {
+		return password;
+	}
+	public void setPassword(char password) {
+		this.password = password;
+	}
 
 	
 	
