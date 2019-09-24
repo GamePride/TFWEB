@@ -40,4 +40,5 @@ public class Plan implements Serializable {
 	public void setPlan(float plan) {
 		this.plan = plan;
 	}
+	
 }
