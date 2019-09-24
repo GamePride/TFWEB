@@ -21,7 +21,10 @@
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
+<<<<<<< HEAD
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+=======
+>>>>>>> branch 'master' of https://github.com/GamePride/TFWEB.git
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="target/generated-sources/annotations">
@@ -37,6 +40,14 @@
 			<attribute name="owner.project.facets" value="jpt.jpa;jst.web;jst.jsf"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
+=======
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+>>>>>>> branch 'master' of https://github.com/GamePride/TFWEB.git
 	<classpathentry kind="src" output="target/test-classes" path="target/generated-test-sources/test-annotations">
 		<attributes>
 			<attribute name="optional" value="true"/>
@@ -46,10 +57,13 @@
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_221">
 		<attributes>
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+=======
+>>>>>>> branch 'master' of https://github.com/GamePride/TFWEB.git
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
