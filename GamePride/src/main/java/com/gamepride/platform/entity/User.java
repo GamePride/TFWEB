@@ -33,6 +33,7 @@ public class User implements Serializable {
 	}
 	public char getEmail() {
 		return email;
+	
 	}
 	public void setEmail(char email) {
 		this.email = email;

@@ -43,7 +43,4 @@ public class SubscriptionPlan implements Serializable {
 	public void setPhone(int phone) {
 		this.phone = phone;
 	}
-	
-	
-	
 }
