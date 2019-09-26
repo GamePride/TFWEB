@@ -25,17 +25,73 @@ public class Event implements Serializable{
 	@Column(name="game",nullable=false,length=50)
 	private String game;
 	
-	@Column(name="startedAt",nullable=false)
+	@Column(name="started_at",nullable=false)
 	private Calendar startedAt;
 	
 	@Column(name="vacancy",nullable=false)
 	private int vacancy;
 	
-	@Column(name="costInscription",nullable=false)
+	@Column(name="cost_inscription",nullable=false)
 	private int costInscription;
 	
 	@Column(name="reward",nullable=false,length=40)
 	private String reward;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getGame() {
+		return game;
+	}
+
+	public void setGame(String game) {
+		this.game = game;
+	}
+
+	public Calendar getStartedAt() {
+		return startedAt;
+	}
+
+	public void setStartedAt(Calendar startedAt) {
+		this.startedAt = startedAt;
+	}
+
+	public int getVacancy() {
+		return vacancy;
+	}
+
+	public void setVacancy(int vacancy) {
+		this.vacancy = vacancy;
+	}
+
+	public int getCostInscription() {
+		return costInscription;
+	}
+
+	public void setCostInscription(int costInscription) {
+		this.costInscription = costInscription;
+	}
+
+	public String getReward() {
+		return reward;
+	}
+
+	public void setReward(String reward) {
+		this.reward = reward;
+	}
 	
 	
 	
