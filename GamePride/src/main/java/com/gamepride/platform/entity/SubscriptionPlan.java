@@ -20,7 +20,7 @@ public class SubscriptionPlan implements Serializable {
 	private char id;
 	
 	@Column(name="name",nullable=false,length=50)
-	private Calendar subscriptedAt;
+	private String subscriptedAt;
 	
 	public char getId() {
 		return id;
@@ -28,12 +28,11 @@ public class SubscriptionPlan implements Serializable {
 	public void setId(char id) {
 		this.id = id;
 	}
-	public Calendar getSubscriptedAt() {
+	public String getSubscriptedAt() {
 		return subscriptedAt;
 	}
-	public void setSubscriptedAt(Calendar subscriptedAt) {
+	public void setSubscriptedAt(String subscriptedAt) {
 		this.subscriptedAt = subscriptedAt;
 	}
-
-	}
+	
 }
