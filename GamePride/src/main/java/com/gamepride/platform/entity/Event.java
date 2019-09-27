@@ -20,7 +20,7 @@ public class Event implements Serializable{
 	private int id;
 	
 	@Column(name="name",nullable=false,length=40)
-	private String name;
+	private char name;
 	
 	@Column(name="game",nullable=false,length=50)
 	private String game;
@@ -45,11 +45,11 @@ public class Event implements Serializable{
 		this.id = id;
 	}
 
-	public String getName() {
+	public char getName() {
 		return name;
 	}
 
-	public void setName(String name) {
+	public void setName(char name) {
 		this.name = name;
 	}
 

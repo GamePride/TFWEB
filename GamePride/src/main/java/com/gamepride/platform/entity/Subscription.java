@@ -19,7 +19,7 @@ public class Subscription implements Serializable{
 	private int id;
 	
 	@Column(name="ubscription_type",nullable=false,length=20)
-	private String subscriptionType ;
+	private char subscriptionType ;
 	
 	@Column(name="frequency",nullable=false,length=20)
 	private String frequency;
@@ -32,11 +32,11 @@ public class Subscription implements Serializable{
 		this.id = id;
 	}
 
-	public String getSubscriptionType() {
+	public char getSubscriptionType() {
 		return subscriptionType;
 	}
 
-	public void setSubscriptionType(String subscriptionType) {
+	public void setSubscriptionType(char subscriptionType) {
 		this.subscriptionType = subscriptionType;
 	}
 
