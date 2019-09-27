@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -27,7 +28,20 @@ public class User1 implements Serializable {
 	private String password;
 
 	@OneToOne
+	@JoinColumn(name="id_motor",nullable=false)
+	private Person person;
 	
+	public User1(int id, String email, String password, Person person) {
+		super();
+		this.id = id;
+		this.email = email;
+		this.password = password;
+		this.person = person;
+	}
+
+	public User1() {
+		super();
+	}
 	
 	public int getId() {
 		return id;
@@ -51,5 +65,13 @@ public class User1 implements Serializable {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 }
