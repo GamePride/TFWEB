@@ -14,7 +14,7 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org
 	<class>com.gamepride.platform.entity.Person</class>
 	<class>com.gamepride.platform.entity.Role</class>
 	<class>com.gamepride.platform.entity.LanCenter</class>
-	<class>com.gamepride.platform.entity.User</class>
+	<class>com.gamepride.platform.entity.User1</class>
 	<class>com.gamepride.platform.entity.SubscriptionPlan</class>
 	<class>com.gamepride.platform.entity.Payment</class>
 	<properties>

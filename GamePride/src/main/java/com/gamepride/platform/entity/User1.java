@@ -20,28 +20,32 @@ public class User1 implements Serializable {
 	private int id;
 	
 	@Column(name="email",nullable=false,length=50)
-	private char email;
+	private String email;
 	
 	@Column(name="password",nullable=false)
-	private char password;
-	
+	private String password;
+
 	public int getId() {
 		return id;
 	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	public char getEmail() {
+
+	public String getEmail() {
 		return email;
-	
 	}
-	public void setEmail(char email) {
+
+	public void setEmail(String email) {
 		this.email = email;
 	}
-	public char getPassword() {
+
+	public String getPassword() {
 		return password;
 	}
-	public void setPassword(char password) {
+
+	public void setPassword(String password) {
 		this.password = password;
 	}
 }
