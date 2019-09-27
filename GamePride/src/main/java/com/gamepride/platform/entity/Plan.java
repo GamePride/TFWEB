@@ -22,7 +22,7 @@ public class Plan implements Serializable {
 	private String type;
 	@Column(name="plan",nullable=false)
 	private float plan;
-	private int dni;
+	
 	public int getId() {
 		return id;
 	}
