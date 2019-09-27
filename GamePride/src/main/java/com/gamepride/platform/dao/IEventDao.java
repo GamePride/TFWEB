@@ -1,5 +1,10 @@
 package com.gamepride.platform.dao;
 
-public interface IEventDao {
+import java.util.List;
 
+import com.gamepride.platform.entity.Event;
+
+public interface IEventDao {
+public void insertar(Event event);
+public List<Event> listar();
 }

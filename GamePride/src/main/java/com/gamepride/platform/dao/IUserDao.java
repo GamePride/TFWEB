@@ -1,5 +1,10 @@
 package com.gamepride.platform.dao;
 
-public interface IUserDao {
+import java.util.List;
 
+import com.gamepride.platform.entity.User1;
+
+public interface IUserDao {
+	public void insertar(User1 user);
+	public List<User1> listar();
 }
