@@ -59,4 +59,20 @@ public class UserEvent implements Serializable {
 	public void setInscriptionAt(String inscriptionAt) {
 		this.inscriptionAt = inscriptionAt;
 	}
+
+	public User1 getUser() {
+		return user;
+	}
+
+	public void setUser(User1 user) {
+		this.user = user;
+	}
+
+	public Event getEvent() {
+		return event;
+	}
+
+	public void setEvent(Event event) {
+		this.event = event;
+	}
 }
