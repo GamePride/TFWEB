@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,6 +23,26 @@ public class UserEvent implements Serializable {
 	
 	@Column(name="inscriptionAt",nullable=false,length=50)
 	private String inscriptionAt;
+
+	@ManyToOne
+	@JoinColumn(name="id_user",nullable=false)
+	private User1 user;
+	
+	@ManyToOne
+	@JoinColumn(name="id_event",nullable=false)
+	private Event event;
+	
+	public UserEvent(int id, String inscriptionAt, User1 user, Event event) {
+		super();
+		this.id = id;
+		this.inscriptionAt = inscriptionAt;
+		this.user = user;
+		this.event = event;
+	}
+
+	public UserEvent() {
+		super();
+	}
 
 	public int getId() {
 		return id;
