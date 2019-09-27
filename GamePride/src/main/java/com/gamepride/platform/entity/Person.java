@@ -2,6 +2,7 @@ package com.gamepride.platform.entity;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,6 +19,13 @@ public class Person implements Serializable {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
+	@Column(name="name",nullable=false,length=65)
+	private String name;
 	
+	@Column(name="phone",nullable=false,length=9)
+	private int phone;
+	
+	@Column(name="account_number",nullable=false,length=30)
+	private int accountNumber;
 	
 }
