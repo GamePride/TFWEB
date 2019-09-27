@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -31,6 +34,10 @@ public class LanCenter implements Serializable {
 	@Column(name="district",nullable=false,length=60)
 	private String district;
 
+	@ManyToOne
+	@JoinColumn(name="id_person",nullable=false)
+	private Person person;
+	
 	public int getId() {
 		return id;
 	}
