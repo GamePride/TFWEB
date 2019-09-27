@@ -44,8 +44,4 @@ public class User implements Serializable {
 	public void setPassword(char password) {
 		this.password = password;
 	}
-
-
-	
-	
 }
