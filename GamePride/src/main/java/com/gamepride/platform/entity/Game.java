@@ -20,7 +20,7 @@ import javax.persistence.Table;
 		private int id;
 		
 		@Column(name="name",nullable=false,length=40)
-		private char name;
+		private String name;
 
 		public int getId() {
 			return id;
@@ -30,11 +30,11 @@ import javax.persistence.Table;
 			this.id = id;
 		}
 
-		public char getName() {
+		public String getName() {
 			return name;
 		}
 
-		public void setName(char name) {
+		public void setName(String name) {
 			this.name = name;
 		}
 }
