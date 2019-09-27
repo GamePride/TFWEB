@@ -8,6 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -36,6 +38,27 @@ public class Event implements Serializable{
 	
 	@Column(name="reward",nullable=false,length=40)
 	private String reward;
+
+	@ManyToOne
+	@JoinColumn(name="id_lancenter",nullable=false)
+	private LanCenter lancenter;
+	
+	public Event(int id, String name, String game, Calendar startedAt, int vacancy, int costInscription, String reward,
+			LanCenter lancenter) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.game = game;
+		this.startedAt = startedAt;
+		this.vacancy = vacancy;
+		this.costInscription = costInscription;
+		this.reward = reward;
+		this.lancenter = lancenter;
+	}
+
+	public Event() {
+		super();
+	}
 
 	public int getId() {
 		return id;
@@ -92,9 +115,4 @@ public class Event implements Serializable{
 	public void setReward(String reward) {
 		this.reward = reward;
 	}
-	
-	
-	
-	
-
 }
