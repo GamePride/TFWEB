@@ -17,6 +17,7 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org
 	<class>com.gamepride.platform.entity.User1</class>
 	<class>com.gamepride.platform.entity.SubscriptionPlan</class>
 	<class>com.gamepride.platform.entity.Payment</class>
+	<class>com.gamepride.platform.entity.UserEvent</class>
 	<properties>
 		<property name="javax.persistence.schema-generation.database.action" 
 		value="drop-and-create"/>
