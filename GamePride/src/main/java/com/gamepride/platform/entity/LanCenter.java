@@ -38,6 +38,20 @@ public class LanCenter implements Serializable {
 	@JoinColumn(name="id_person",nullable=false)
 	private Person person;
 	
+	public LanCenter(int id, String name, int phone, String adress, String district, Person person) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.phone = phone;
+		this.adress = adress;
+		this.district = district;
+		this.person = person;
+	}
+
+	public LanCenter() {
+		super();
+	}
+
 	public int getId() {
 		return id;
 	}
@@ -76,6 +90,14 @@ public class LanCenter implements Serializable {
 
 	public void setDistrict(String district) {
 		this.district = district;
+	}
+
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
 	}
 	
 }
