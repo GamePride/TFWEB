@@ -12,17 +12,15 @@ import javax.transaction.Transactional;
 import com.gamepride.platform.dao.IEventDao;
 import com.gamepride.platform.entity.Event;
 
-
-
 public class EventDaoImpl implements IEventDao,Serializable {
 	private static final long serialVersionUID =1L;
 	
-	@PersistenceContext(unitName="a")
+	@PersistenceContext(unitName="GamePridePU")
 	private EntityManager em;
-@Transactional
-@Override
+	
+	@Transactional
+	@Override
 	public void insertar(Event event) {
-		// TODO Auto-generated method stub
 		try {
 			em.persist(event);
 		}catch (Exception e)
@@ -30,8 +28,9 @@ public class EventDaoImpl implements IEventDao,Serializable {
 			System.out.println(e.getMessage());
 		}
 	}
-@SuppressWarnings("unchecked")
-@Override
+	
+	@SuppressWarnings("unchecked")
+	@Override
 	public List<Event> listar() {
 		List<Event>lista=new ArrayList <Event>();
 		try {
@@ -44,6 +43,15 @@ public class EventDaoImpl implements IEventDao,Serializable {
 		return lista;
 	}
 
-
+	@Transactional
+	@Override
+	public void eliminar(int idEvent) {
+		Event eve= new Event();
+		try {
+			eve=em.getReference(Event.class, idEvent);
+			em.remove(eve);
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 }
-

@@ -7,5 +7,8 @@ import com.gamepride.platform.entity.Person;
 
 public interface IPersonDao {
 	public void insertar(Person person);
+	
 	public List<Person> listar();
+
+	void eliminar(int idPerson);
 }

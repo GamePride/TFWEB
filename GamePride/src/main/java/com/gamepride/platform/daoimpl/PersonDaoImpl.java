@@ -14,15 +14,14 @@ import com.gamepride.platform.dao.IPersonDao;
 
 import com.gamepride.platform.entity.Person;
 
-
-
 public class PersonDaoImpl implements IPersonDao,Serializable {
 	private static final long serialVersionUID =1L;
 	
-	@PersistenceContext(unitName="a")
+	@PersistenceContext(unitName="GamePridePU")
 	private EntityManager em;
-@Transactional
-@Override
+	
+	@Transactional
+	@Override
 	public void insertar(Person person) {
 		// TODO Auto-generated method stub
 		try {
@@ -32,8 +31,9 @@ public class PersonDaoImpl implements IPersonDao,Serializable {
 			System.out.println(e.getMessage());
 		}
 	}
-@SuppressWarnings("unchecked")
-@Override
+	
+	@SuppressWarnings("unchecked")
+	@Override
 	public List<Person> listar() {
 		List<Person>lista=new ArrayList <Person>();
 		try {
@@ -45,6 +45,16 @@ public class PersonDaoImpl implements IPersonDao,Serializable {
 		
 		return lista;
 	}
-
-
+	
+	@Transactional
+	@Override
+	public void eliminar(int idPerson) {
+		Person per= new Person();
+		try {
+			per=em.getReference(Person.class, idPerson);
+			em.remove(per);
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 }

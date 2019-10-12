@@ -14,17 +14,15 @@ import com.gamepride.platform.dao.ILanCenterDao;
 
 import com.gamepride.platform.entity.LanCenter;
 
-
-
 public class LanCenterDaoImpl implements ILanCenterDao,Serializable {
 	private static final long serialVersionUID =1L;
 	
-	@PersistenceContext(unitName="a")
+	@PersistenceContext(unitName="GamePridePU")
 	private EntityManager em;
-@Transactional
-@Override
+	
+	@Transactional
+	@Override
 	public void insertar(LanCenter lancenter) {
-		// TODO Auto-generated method stub
 		try {
 			em.persist(lancenter);
 		}catch (Exception e)
@@ -32,8 +30,9 @@ public class LanCenterDaoImpl implements ILanCenterDao,Serializable {
 			System.out.println(e.getMessage());
 		}
 	}
-@SuppressWarnings("unchecked")
-@Override
+	
+	@SuppressWarnings("unchecked")
+	@Override
 	public List<LanCenter> listar() {
 		List<LanCenter>lista=new ArrayList <LanCenter>();
 		try {
@@ -46,5 +45,15 @@ public class LanCenterDaoImpl implements ILanCenterDao,Serializable {
 		return lista;
 	}
 
-
+	@Transactional
+	@Override
+	public void eliminar(int idLanCenter) {
+		LanCenter lan= new LanCenter();
+		try {
+			lan=em.getReference(LanCenter.class, idLanCenter);
+			em.remove(lan);
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 }

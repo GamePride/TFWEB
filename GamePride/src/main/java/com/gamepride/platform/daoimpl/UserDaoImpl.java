@@ -14,17 +14,15 @@ import com.gamepride.platform.dao.IUserDao;
 
 import com.gamepride.platform.entity.User1;
 
-
-
 public class UserDaoImpl implements IUserDao,Serializable {
 	private static final long serialVersionUID =1L;
 	
-	@PersistenceContext(unitName="a")
+	@PersistenceContext(unitName="GamePridePU")
 	private EntityManager em;
-@Transactional
-@Override
+	
+	@Transactional
+	@Override
 	public void insertar(User1 user) {
-		// TODO Auto-generated method stub
 		try {
 			em.persist(user);
 		}catch (Exception e)
@@ -32,8 +30,9 @@ public class UserDaoImpl implements IUserDao,Serializable {
 			System.out.println(e.getMessage());
 		}
 	}
-@SuppressWarnings("unchecked")
-@Override
+	
+	@SuppressWarnings("unchecked")
+	@Override
 	public List<User1> listar() {
 		List<User1>lista=new ArrayList <User1>();
 		try {
@@ -46,5 +45,15 @@ public class UserDaoImpl implements IUserDao,Serializable {
 		return lista;
 	}
 
-
+	@Transactional
+	@Override
+	public void eliminar(int idUser) {
+		User1 user= new User1();
+		try {
+			user=em.getReference(User1.class, idUser);
+			em.remove(user);
+		}catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}
 }

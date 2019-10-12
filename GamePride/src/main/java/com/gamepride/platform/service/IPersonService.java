@@ -8,4 +8,6 @@ public interface IPersonService {
 	public void insertar(Person person);
 	
 	public List<Person>listar();
+
+	void eliminar(int idPerson);
 }

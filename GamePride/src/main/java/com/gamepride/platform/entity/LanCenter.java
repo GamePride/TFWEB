@@ -97,6 +97,5 @@ public class LanCenter implements Serializable {
 
 	public void setPerson(Person person) {
 		this.person = person;
-	}
-	
+	}	
 }
