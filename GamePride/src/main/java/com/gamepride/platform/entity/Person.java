@@ -46,7 +46,4 @@ public class Person implements Serializable {
 	public void setPhone(int phone) {
 		this.phone = phone;
 	}
-	
-	
-	
 }
